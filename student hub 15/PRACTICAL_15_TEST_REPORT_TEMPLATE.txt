@@ -1,0 +1,49 @@
+STUDENT HUB — PRACTICAL 15 TEST REPORT
+======================================
+
+Tester: ______________________________________________
+Date: ________________________________________________
+Operating system: ____________________________________
+PHP version: _________________________________________
+MySQL/MariaDB version: ________________________________
+Browser and version: __________________________________
+Project URL: __________________________________________
+GitHub repository URL (if submitted): __________________
+
+Status legend: PASS / FAIL / NOT TESTED
+
+| Test case | Status | Evidence / notes |
+|-----------|--------|-----------------|
+| 1. Homepage opens | | |
+| 2. Navigation links | | |
+| 3. Responsive layout | | |
+| 4. Authentication | | |
+| 5. Role-based access | | |
+| 6. Database connection | | |
+| 7. PR11 CRUD | | |
+| 8. PR12 CRUD and poster validation | | |
+| 9. PR13 AJAX CRUD and CSRF | | |
+| 10. PR14 dashboard and audit log | | |
+| 11. Input validation / output escaping | | |
+| 12. Accessibility quick check | | |
+| 13. Installation documentation followed | | |
+| 14. Git commit and push | | |
+| 15. Local deployment verified | | |
+
+PHP syntax check: All PHP files were checked with `php -l` while preparing this package. This does not replace runtime testing with Apache, MySQL, and a browser.
+
+Issues found:
+________________________________________________________________
+________________________________________________________________
+
+Fixes applied:
+________________________________________________________________
+________________________________________________________________
+
+Known limitations / tests not completed:
+________________________________________________________________
+________________________________________________________________
+
+Final assessment: ______________________________________________
+
+Tester signature: ______________________  Date: ________________

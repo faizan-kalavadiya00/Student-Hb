@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>FAQs - Student Hub</title>
+<link href="style.css" rel="stylesheet"/><script src="script.js" defer></script></head>
+<body class="external-style-21">
+<div class="external-style-22">
+<img alt="Student Hub Logo" class="external-style-23" src="student.png"/>
+<h1 class="external-style-24">
+            Student Hub
+        </h1>
+<p class="external-style-25">
+    <a class="external-style-6" href="home.html">Home</a>
+    <a class="external-style-6" href="dashboard.php">Dashboard</a>
+    <a class="external-style-6" href="profile.html">Profile</a>
+    <a class="external-style-6" href="faq.html">FAQs</a>
+    <a class="external-style-6" href="about.html">About</a>
+    <a class="external-style-6" href="login.php">Login</a>
+    <a class="external-style-6" href="events.html">Events</a>
+    <a class="external-style-6" href="students.html">Student Profiles</a>
+    <a class="external-style-6" href="pr7.php">PHP Form</a>
+    <a class="external-style-6" href="pr8.php">Database</a>
+    <a class="external-style-6" href="pr9.php">Secure Registration</a>
+        <a class="external-style-6" href="login.php">Secure Login</a>
+</p>
+</div>
+
+<main class="pr6-page" data-pr6-type="faqs">
+    <h1 class="pr6-title">Frequently Asked Questions</h1>
+    <p class="pr6-intro">FAQ content is fetched from JSON. Search by keyword or filter by topic.</p>
+    <section class="pr6-controls" aria-label="FAQ search and filters">
+        <label>Search FAQs <input type="search" id="pr6-search" placeholder="Search questions or answers"></label>
+        <label>Topic
+            <select id="pr6-filter"><option value="">All topics</option></select>
+        </label>
+        <label>Sort by
+            <select id="pr6-sort">
+                <option value="id-asc">Default order</option>
+                <option value="question-asc">Question (A–Z)</option>
+                <option value="question-desc">Question (Z–A)</option>
+            </select>
+        </label>
+    </section>
+    <p class="pr6-status" id="pr6-status" role="status" aria-live="polite">Loading FAQs…</p>
+    <div class="pr6-faq-list" id="pr6-results"></div>
+    <nav class="pr6-pagination" aria-label="FAQ result pages">
+        <button type="button" id="pr6-prev" disabled>Previous</button>
+        <span id="pr6-page-label">Page 0 of 0</span>
+        <button type="button" id="pr6-next" disabled>Next</button>
+    </nav>
+</main>
+<script src="js/pr6-data.js" defer></script>
+<script src="js/pr6-ui.js" defer></script>
+<footer class="site-footer">
+<p><b>Student Hub</b></p>
+<p>© 2026 Student Hub. All Rights Reserved.</p>
+</footer></body>
+</html>

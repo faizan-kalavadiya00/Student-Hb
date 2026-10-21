@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "TechNova Hackathon",
+    "date": "2026-11-05",
+    "category": "Technology",
+    "venue": "Computer Lab",
+    "description": "A team-based hackathon to build practical software solutions."
+  },
+  {
+    "id": 2,
+    "title": "AI Innovation Workshop",
+    "date": "2026-11-08",
+    "category": "Workshop",
+    "venue": "Innovation Centre",
+    "description": "Hands-on introduction to responsible AI tools and prototypes."
+  },
+  {
+    "id": 3,
+    "title": "Cybersecurity Awareness Seminar",
+    "date": "2026-11-12",
+    "category": "Seminar",
+    "venue": "Seminar Hall",
+    "description": "Learn about phishing, passwords, privacy and safe computing."
+  },
+  {
+    "id": 4,
+    "title": "Inter-College Debate",
+    "date": "2026-11-15",
+    "category": "Cultural",
+    "venue": "Main Auditorium",
+    "description": "Debate current technology and society topics with students."
+  },
+  {
+    "id": 5,
+    "title": "Web Development Bootcamp",
+    "date": "2026-11-19",
+    "category": "Workshop",
+    "venue": "Computer Lab 2",
+    "description": "Practice HTML, CSS, JavaScript and responsive design."
+  },
+  {
+    "id": 6,
+    "title": "Career Planning Session",
+    "date": "2026-11-22",
+    "category": "Career",
+    "venue": "Conference Room",
+    "description": "Explore internships, resumes and technical interview preparation."
+  },
+  {
+    "id": 7,
+    "title": "Robotics Demonstration",
+    "date": "2026-11-26",
+    "category": "Technology",
+    "venue": "Project Lab",
+    "description": "Student teams demonstrate sensor-based robotics projects."
+  },
+  {
+    "id": 8,
+    "title": "Open Source Day",
+    "date": "2026-11-29",
+    "category": "Technology",
+    "venue": "Innovation Centre",
+    "description": "Discover Git, collaborative workflows and open-source projects."
+  },
+  {
+    "id": 9,
+    "title": "Annual Sports Meet",
+    "date": "2026-12-03",
+    "category": "Sports",
+    "venue": "College Sports Ground",
+    "description": "Friendly competitions across indoor and outdoor sports."
+  },
+  {
+    "id": 10,
+    "title": "Photography Walk",
+    "date": "2026-12-06",
+    "category": "Cultural",
+    "venue": "Campus Assembly Point",
+    "description": "A guided campus photography activity for beginners."
+  },
+  {
+    "id": 11,
+    "title": "Cloud Computing Talk",
+    "date": "2026-12-10",
+    "category": "Seminar",
+    "venue": "Seminar Hall",
+    "description": "Understand cloud fundamentals, deployment and career pathways."
+  },
+  {
+    "id": 12,
+    "title": "Project Showcase",
+    "date": "2026-12-14",
+    "category": "Technology",
+    "venue": "Central Hall",
+    "description": "Present semester projects and receive peer feedback."
+  },
+  {
+    "id": 13,
+    "title": "Resume Review Clinic",
+    "date": "2026-12-17",
+    "category": "Career",
+    "venue": "Placement Cell",
+    "description": "Get practical suggestions for improving your resume."
+  },
+  {
+    "id": 14,
+    "title": "Cultural Evening",
+    "date": "2026-12-20",
+    "category": "Cultural",
+    "venue": "Main Auditorium",
+    "description": "An evening of music, dance and student performances."
+  },
+  {
+    "id": 15,
+    "title": "Data Structures Contest",
+    "date": "2026-12-23",
+    "category": "Competition",
+    "venue": "Computer Lab 1",
+    "description": "Solve programming challenges focused on core data structures."
+  }
+]

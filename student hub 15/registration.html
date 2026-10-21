@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Student Hub</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body class="external-style-21">
+    <div class="external-style-22">
+        <img alt="Student Hub Logo" class="external-style-23" src="student.png">
+        <h1 class="external-style-24">Student Hub</h1>
+        <p class="external-style-25">
+            <a class="external-style-6" href="home.html">Home</a>
+            <a class="external-style-6" href="dashboard.php">Dashboard</a>
+            <a class="external-style-6" href="profile.html">Profile</a>
+            <a class="external-style-6" href="faq.html">FAQs</a>
+            <a class="external-style-6" href="about.html">About</a>
+            <a class="external-style-6" href="login.php">Login</a>
+            <a class="external-style-6" href="events.html">Events</a>
+    <a class="external-style-6" href="students.html">Student Profiles</a>
+    <a class="external-style-6" href="pr7.php">PHP Form</a>
+    <a class="external-style-6" href="pr8.php">Database</a>
+    <a class="external-style-6" href="pr9.php">Secure Registration</a>
+        <a class="external-style-6" href="login.php">Secure Login</a>
+        </p>
+    </div>
+
+    <main>
+        <h1 class="registration-title">Student Registration</h1>
+        <p class="registration-intro">Complete all required fields to create your Student Hub registration.</p>
+
+        <form class="registration-form" id="student-registration" novalidate>
+            <div class="registration-field">
+                <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name" aria-describedby="name-error" required>
+                <small class="field-error" id="name-error" aria-live="polite"></small>
+            </div>
+
+            <div class="registration-field">
+                <label for="enrollment">Enrollment Number</label>
+                <input type="text" id="enrollment" name="enrollment" placeholder="Enter enrollment number" autocomplete="off">
+            </div>
+
+            <div class="registration-field">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" aria-describedby="email-error" required>
+                <small class="field-error" id="email-error" aria-live="polite"></small>
+            </div>
+
+            <div class="registration-field">
+                <label for="mobile">Mobile Number <span aria-hidden="true">*</span></label>
+                <input type="tel" id="mobile" name="mobile" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number" aria-describedby="mobile-error" required>
+                <small class="field-error" id="mobile-error" aria-live="polite"></small>
+            </div>
+
+            <div class="registration-field">
+                <label for="course">Course <span aria-hidden="true">*</span></label>
+                <select id="course" name="course" aria-describedby="course-error" required>
+                    <option value="">Select Course</option>
+                    <option value="btech-cs">B.Tech Computer Science</option>
+                    <option value="btech-it">B.Tech Information Technology</option>
+                    <option value="btech-ce">B.Tech Computer Engineering</option>
+                </select>
+                <small class="field-error" id="course-error" aria-live="polite"></small>
+            </div>
+
+            <div class="registration-field">
+                <label for="year">Year of Study <span aria-hidden="true">*</span></label>
+                <select id="year" name="year" aria-describedby="year-error" required>
+                    <option value="">Select Year</option>
+                    <option value="1">First Year</option>
+                    <option value="2">Second Year</option>
+                    <option value="3">Third Year</option>
+                    <option value="4">Fourth Year</option>
+                </select>
+                <small class="field-error" id="year-error" aria-live="polite"></small>
+            </div>
+
+            <fieldset class="registration-field gender-field" aria-describedby="gender-error">
+                <legend>Gender <span aria-hidden="true">*</span></legend>
+                <div class="option-row">
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                    <label><input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say</label>
+                </div>
+                <small class="field-error" id="gender-error" aria-live="polite"></small>
+            </fieldset>
+
+            <div class="registration-field">
+                <label for="password">Password <span aria-hidden="true">*</span></label>
+                <input type="password" id="password" name="password" autocomplete="new-password" placeholder="Create a strong password" aria-describedby="password-help password-error" required>
+                <div class="strength-track" aria-hidden="true"><div id="strength-fill"></div></div>
+                <p class="strength-label" id="password-help" aria-live="polite">Use 8+ characters with uppercase, lowercase, a number and a symbol.</p>
+                <small class="field-error" id="password-error" aria-live="polite"></small>
+            </div>
+
+            <div class="registration-field">
+                <label for="confirm-password">Confirm Password <span aria-hidden="true">*</span></label>
+                <input type="password" id="confirm-password" name="confirm-password" autocomplete="new-password" placeholder="Re-enter your password" aria-describedby="confirm-password-error" required>
+                <small class="field-error" id="confirm-password-error" aria-live="polite"></small>
+            </div>
+
+            <div class="registration-field terms-field">
+                <label for="terms"><input type="checkbox" id="terms" name="terms" aria-describedby="terms-error" required> I have read and accept the terms and conditions. <span aria-hidden="true">*</span></label>
+                <small class="field-error" id="terms-error" aria-live="polite"></small>
+            </div>
+
+            <button type="submit" class="registration-button">Register</button>
+            <p id="registration-result" class="registration-result" role="status" aria-live="polite"></p>
+            <p class="required-note">* Required fields</p>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p><b>Student Hub</b></p>
+        <p>© 2026 Student Hub. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

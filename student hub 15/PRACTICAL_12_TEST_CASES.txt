@@ -1,0 +1,17 @@
+PRACTICAL 12 — TEST CASES
+=========================
+TC01: Logged-out user opens pr12.php -> login redirect.
+TC02: Student role opens pr12.php -> 403 Access denied.
+TC03: Admin opens pr12.php -> CRUD form and event list load.
+TC04: Valid event without poster -> insert succeeds.
+TC05: Valid JPG/PNG/WEBP <= 2 MB -> upload succeeds.
+TC06: Invalid type (PHP/SVG/GIF/text renamed as image) -> rejected.
+TC07: Image larger than 2 MB -> rejected.
+TC08: Missing required field / invalid date -> rejected with message.
+TC09: Edit event fields -> database row updates.
+TC10: Save edit without selecting a poster -> existing poster retained.
+TC11: Replace poster -> new randomized filename is saved; old poster removed.
+TC12: Search/category/status filters -> correct matching rows displayed.
+TC13: Delete event -> event and poster removed.
+TC14: Invalid CSRF token -> request rejected with HTTP 403.
+TC15: User input containing HTML is displayed escaped, not executed.

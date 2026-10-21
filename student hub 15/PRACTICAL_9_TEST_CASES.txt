@@ -1,0 +1,56 @@
+PRACTICAL 9 — TEST CASES
+
+Run these through http://localhost/<project-folder>/pr9.php after importing studenthub_pr9.sql.
+Use a new test email/username for the valid case.
+
+1. Valid registration
+   Full name: Test Student
+   Username: teststudent01
+   Email: teststudent01@example.com
+   Password / Confirm: TestPass!123
+   Expected: success message; one users row; password_hash is not plaintext; audit action registration_success.
+
+2. Invalid email
+   Email: not-an-email
+   Expected: validation error; no user row inserted.
+
+3. Short username
+   Username: ab
+   Expected: validation error; no user row inserted.
+
+4. Invalid username characters
+   Username: bad user!
+   Expected: validation error; no user row inserted.
+
+5. Short password
+   Password: abc123
+   Expected: password length validation error; no user row inserted.
+
+6. Password mismatch
+   Password: TestPass!123
+   Confirm: OtherPass!123
+   Expected: mismatch error; no user row inserted.
+
+7. Duplicate username
+   Submit a new email but reuse teststudent01.
+   Expected: username-already-registered message; no second user row.
+
+8. Duplicate email
+   Submit a new username but reuse teststudent01@example.com.
+   Expected: email-already-registered message; no second user row.
+
+9. SQL injection attempt
+   Try a username/email containing SQL fragments such as ' OR 1=1 --.
+   Expected: rejected by validation or treated as ordinary bound data; database schema remains intact.
+
+10. CSRF check
+    Open the form, then remove/change the hidden csrf_token value in browser developer tools and submit.
+    Expected: security-check error; no account is created.
+
+11. Password hashing verification
+    In phpMyAdmin, compare the entered password with users.password_hash.
+    Expected: stored value is a password hash and does not equal the entered password.
+
+12. Audit log
+    After successful and rejected tests, inspect registration_audit_logs.
+    Expected: event records exist; no password or password hash is stored in audit details.

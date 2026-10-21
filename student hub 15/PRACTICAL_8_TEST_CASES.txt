@@ -1,0 +1,36 @@
+PRACTICAL 8 — TEST CASES AND EXPECTED RESULTS
+================================================
+
+Precondition: Apache and MySQL are running in XAMPP, and studenthub_pr8.sql has been imported.
+
+1. Open PR8 page
+   Action: Visit http://localhost/student%20hub%207/pr8.php
+   Expected: The page loads, displays student/event choices, and shows the seeded registration.
+
+2. Successful registration
+   Action: Select a student and event not previously paired, then submit.
+   Expected: A success message appears and the new registration appears in the report.
+
+3. Duplicate registration
+   Action: Submit the same student/event pair again.
+   Expected: A friendly duplicate/unavailable-record message appears; no duplicate row is inserted.
+
+4. Required fields
+   Action: Try submitting without selecting a student or event.
+   Expected: Browser required-field validation prevents submission; server-side validation also rejects missing/invalid IDs.
+
+5. SQL injection input
+   Action: Attempt to alter form values using a string such as `1 OR 1=1`.
+   Expected: Invalid values are rejected; SQL is executed with prepared parameters rather than concatenated user input.
+
+6. Foreign key integrity
+   Action: Attempt to insert a registration with a nonexistent student_id or event_id through SQL.
+   Expected: MySQL rejects the row because of the foreign-key constraints.
+
+7. Connection failure
+   Action: Stop MySQL and reload pr8.php.
+   Expected: A safe, understandable connection error appears; technical details are written to the server error log.
+
+8. Joined report
+   Action: Register a student for an event.
+   Expected: Report shows enrollment number, student name, event title, date, venue, status, and registration timestamp.

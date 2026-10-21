@@ -1,0 +1,48 @@
+PRACTICAL 7 — TEST CASES AND EXPECTED RESULTS
+=============================================
+
+Run pr7.php through XAMPP/WAMP or `php -S localhost:8000`. Use dummy test data.
+
+1. Valid submission
+   Input: name=Faizan Test, email=faizan.test@example.com, phone=9876543210,
+          course=Computer Science, year=2, message=Testing PR7.
+   Expected: success message; one matching record appended to CSV and JSON;
+             record appears in Recently Stored Records.
+
+2. Invalid email
+   Input: email=faizan@
+   Expected: server-side validation error; no record stored.
+
+3. Invalid mobile number
+   Input: phone=12345
+   Expected: server-side validation error; no record stored.
+
+4. Missing name
+   Input: submit with name empty (disable browser validation if testing directly).
+   Expected: server-side validation error; no record stored.
+
+5. Invalid course or year
+   Input: tamper with the select value using browser developer tools.
+   Expected: server-side validation error; no record stored.
+
+6. Long message
+   Input: message longer than 1000 characters.
+   Expected: server-side validation error; no record stored.
+
+7. HTML/script payload
+   Input: name=<script>alert(1)</script> or message=<img src=x onerror=alert(1)>.
+   Expected: output is HTML-escaped and does not execute as script. The test name may
+             pass length validation, but must never execute in the stored-record table.
+
+8. CSRF token missing/modified
+   Input: remove or change the hidden csrf_token value and submit.
+   Expected: request rejected with a form-session verification error; no record stored.
+
+9. Storage
+   After a valid submission, inspect data/pr7_submissions.csv and
+   data/pr7_submissions.json.
+   Expected: both contain the submitted record; JSON remains valid JSON.
+
+10. Existing site regression check
+    Open home.html, dashboard.html, events.html, students.html and faq.html via localhost.
+    Expected: previous Student Hub pages remain available; Practical 6 JSON pages work.

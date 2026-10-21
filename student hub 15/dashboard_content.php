@@ -1,0 +1,143 @@
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/auth.php';
+sh_require_login($pdo);
+?>
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Dashboard</title>
+<link href="style.css" rel="stylesheet"/><script src="script.js" defer></script></head>
+<body class="external-style-1">
+<div class="external-style-2">
+<img alt="Student Hub Logo" class="external-style-3" src="student.png"/>
+<h1 class="external-style-4">Student Hub</h1>
+<p class="external-style-5">
+    <a class="external-style-6" href="home.html">Home</a>
+    <a class="external-style-6" href="dashboard.php">Dashboard</a>
+    <a class="external-style-6" href="profile.html">Profile</a>
+    <a class="external-style-6" href="faq.html">FAQs</a>
+    <a class="external-style-6" href="about.html">About</a>
+    <a class="external-style-6" href="login.php">Login</a>
+    <a class="external-style-6" href="events.html">Events</a>
+    <a class="external-style-6" href="students.html">Student Profiles</a>
+    <a class="external-style-6" href="pr7.php">PHP Form</a>
+    <a class="external-style-6" href="pr8.php">Database</a>
+    <a class="external-style-6" href="pr9.php">Secure Registration</a>
+        <a class="external-style-6" href="login.php">Secure Login</a>
+</p>
+</div>
+<h1 class="external-style-11"><b>Dashboard</b></h1>
+<div class="external-style-12">
+<h2 class="external-style-13">Time-Table</h2>
+<table border="1px" cellpadding="15" cellspacing="0" class="external-style-14">
+<tr class="external-style-15">
+<th>Day/Time</th>
+<th>09:10-10:10 AM</th>
+<th>10:10-11:10 AM</th>
+<th>11:10-12:10 AM</th>
+<th>12:10-01:10 PM</th>
+<th>01:10-02:10 PM</th>
+<th>02:10-02:20 PM</th>
+<th>02:20-03:20 PM</th>
+<th>03:20-04:20 PM</th>
+</tr>
+<tr class="external-style-16">
+<th>Monday</th>
+<td>CSUC-201</td>
+<td>MSUD-203</td>
+<td></td>
+<td colspan="2">ITUC-201 (Practical)</td>
+<td></td>
+<td>MSUD-203</td>
+<td>ITUE-203</td>
+</tr>
+<tr class="external-style-16">
+<th>Tuesday</th>
+<td>ITUE-203</td>
+<td>ITUC-201</td>
+<td></td>
+<td>CEUE-203</td>
+<td>Counselling / Mentoring</td>
+<td></td>
+<td colspan="2">ITUE-203 / CEUE-203 (Practical)</td>
+</tr>
+<tr class="external-style-16">
+<th>Wednesday</th>
+<td colspan="2">CEUE-203 / ITUE-201 (Practical)</td>
+<td></td>
+<td>CSUC-201</td>
+<td>Counselling / Mentoring</td>
+<td></td>
+<td>ITUC-201</td>
+<td>CEUE-203</td>
+</tr>
+<tr class="external-style-16">
+<th>Thursday</th>
+<td>CSUC-201</td>
+<td>MSUD-203</td>
+<td></td>
+<td>ITUE-203</td>
+<td>ITUC-201</td>
+<td></td>
+<td colspan="2">CSUC-201 / ITUC-201 (Practical)</td>
+</tr>
+<tr class="external-style-16">
+<th>Friday</th>
+<td colspan="2">ITUE-201 / CSUC-201 (Practical)</td>
+<td></td>
+<td>MSUD-203</td>
+<td>ITUC-201</td>
+<td></td>
+<td colspan="2">HSUV-201</td>
+</tr>
+<tr class="external-style-16">
+<th>Saturday</th>
+<td colspan="2">Skill Enhancement / Training</td>
+<td></td>
+<td colspan="2">Skill Enhancement / Training</td>
+<td></td>
+<td colspan="2">Skill Enhancement / Training</td>
+</tr>
+</table>
+<div class="external-style-17">
+
+    <h2 class="external-style-18">
+        Administrative Services
+    </h2>
+
+    <div class="services-grid">
+
+        <a class="external-style-19" href="fees.html">
+            <div class="external-style-20">
+                <b>Fees Details</b>
+            </div>
+        </a>
+
+        <a class="external-style-19" href="hallticket.html">
+            <div class="external-style-20">
+                <b>Hall Ticket</b>
+            </div>
+        </a>
+
+        <a class="external-style-19" href="medicalleave.html">
+            <div class="external-style-20">
+                <b>Medical Leave</b>
+            </div>
+        </a>
+
+        <a class="external-style-19" href="scholarship.html">
+            <div class="external-style-20">
+                <b>Scholarship</b>
+            </div>
+        </a>
+
+    </div>
+
+</div>
+</div></div><footer class="site-footer">
+<p><b>Student Hub</b></p>
+<p>© 2026 Student Hub. All Rights Reserved.</p>
+</footer></body></html>

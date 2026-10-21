@@ -1,0 +1,17 @@
+PRACTICAL 14 — AUDIT LOG TEST CASES
+===================================
+
+1. Admin dashboard opens only for a logged-in user whose users.role is 'admin'.
+2. Student user is redirected/denied when opening admin_dashboard.php.
+3. Admin dashboard counts are loaded from MySQL rather than hard-coded values.
+4. Latest account registrations are ordered newest first.
+5. Opening admin_dashboard.php creates a VIEW_ADMIN_DASHBOARD audit entry.
+6. Opening pr14_audit.php creates a VIEW_AUDIT_LOG audit entry.
+7. PR11 create/update/delete/restore actions create audit entries.
+8. PR12 create/update/delete actions create audit entries.
+9. PR13 API create/update/delete actions create audit entries.
+10. Audit records include timestamp, action, username, details, and IP address when available.
+11. The audit log page displays entries newest first and caps the list at 200 rows.
+12. Student-specific dashboard does not expose administrator management links.
+13. Importing studenthub_pr14.sql does not drop existing tables or rows.
+14. If an earlier practical's statistics table is absent, dashboard loads without a fatal error.

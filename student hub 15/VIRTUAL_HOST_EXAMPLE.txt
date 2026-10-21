@@ -1,0 +1,25 @@
+OPTIONAL APACHE VIRTUAL HOST EXAMPLE (LOCAL DEVELOPMENT)
+=========================================================
+
+This is an example only. Adjust paths and verify your Apache installation before enabling it.
+
+1. Ensure Apache's virtual-host configuration is included from httpd.conf (XAMPP commonly uses:
+   Include conf/extra/httpd-vhosts.conf).
+2. Add an entry to C:\Windows\System32\drivers\etc\hosts as Administrator:
+   127.0.0.1 studenthub.local
+3. Add the following to Apache's httpd-vhosts.conf, adjusting the path if you renamed the folder:
+
+<VirtualHost *:80>
+    ServerName studenthub.local
+    DocumentRoot "C:/xampp/htdocs/student hub 8"
+    <Directory "C:/xampp/htdocs/student hub 8">
+        Options -Indexes
+        AllowOverride All
+        Require local
+    </Directory>
+    ErrorLog "logs/studenthub-error.log"
+    CustomLog "logs/studenthub-access.log" combined
+</VirtualHost>
+
+4. Restart Apache and open http://studenthub.local/home.html.
+5. This example is local-only. Do not remove `Require local` or expose the development server to the public internet without a production deployment review.

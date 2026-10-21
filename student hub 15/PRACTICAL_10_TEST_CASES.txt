@@ -1,0 +1,68 @@
+PRACTICAL 10 — TEST CASES
+
+Run these tests through Apache/XAMPP after importing PR8, PR9, and PR10 SQL files.
+
+1. Successful student login
+   Register a student at pr9.php, then log in at login.php with the correct password.
+   Expected: session ID regenerated; redirected to student_dashboard.php.
+
+2. Failed login
+   Enter an incorrect password.
+   Expected: "Invalid username/email or password."; no dashboard access.
+
+3. Password verification
+   Inspect users.password_hash in phpMyAdmin.
+   Expected: stored hash is not the plaintext password; password_verify() allows correct login.
+
+4. Session ID regeneration
+   Compare the session cookie before and after login in browser developer tools.
+   Expected: session ID changes after successful login.
+
+5. Protected dashboard
+   Log out, then open dashboard.php and dashboard_content.php directly.
+   Expected: redirect to login.php?required=1.
+
+6. Role-based redirection
+   Log in as a normal student.
+   Expected: student_dashboard.php.
+   Set one registered account to admin with:
+       UPDATE users SET role='admin' WHERE username='your_admin_username';
+   Log in as that account.
+   Expected: admin_dashboard.php.
+
+7. Role access control (403)
+   While logged in as student, directly open admin_dashboard.php.
+   Expected: HTTP 403 Access denied.
+   While logged in as admin, directly open student_dashboard.php.
+   Expected: HTTP 403 Access denied.
+
+8. Logout
+   Click Logout.
+   Expected: session destroyed, remember cookie cleared, redirect to login.php?loggedout=1.
+   Then open dashboard.php.
+   Expected: login required.
+
+9. Session timeout
+   Log in and leave the site inactive for over 15 minutes, then request dashboard.php.
+   Expected: redirect to login.php?timeout=1 and old session is no longer authenticated.
+
+10. Remember Me
+    Select Remember me and log in. Close/reopen the browser, then open dashboard.php.
+    Expected: automatic login while the token is valid; validator is rotated and only its hash is stored.
+    Inspect remember_tokens.validator_hash; it must not contain the cookie validator.
+
+11. Remember token expiry / invalidation
+    Change the browser token or set expires_at to a past date in phpMyAdmin.
+    Expected: token rejected, cookie cleared, login required.
+
+12. CSRF protection
+    Change or remove csrf_token in the login form using developer tools and submit.
+    Expected: security check error; no login.
+
+13. Last login timestamp
+    After a successful login, inspect users.last_login.
+    Expected: it contains the latest login timestamp.
+
+14. User-facing error safety
+    Submit a nonexistent username and then an incorrect password for an existing user.
+    Expected: same generic failure message in both cases.

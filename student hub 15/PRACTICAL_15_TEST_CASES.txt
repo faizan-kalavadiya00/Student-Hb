@@ -1,0 +1,52 @@
+PRACTICAL 15 — INTEGRATION AND END-TO-END TEST CASES
+====================================================
+
+Record actual results in PRACTICAL_15_TEST_REPORT_TEMPLATE.txt. Do not mark a test PASS until it has been executed.
+
+NAVIGATION AND RESPONSIVENESS
+1. Homepage opens through Apache without a PHP/server error.
+2. Homepage links to the shared pages and PR7–PR14 module pages are present.
+3. Each expected local link resolves to the intended page; there are no missing local assets.
+4. Pages remain usable at desktop and narrow/mobile viewport widths; tables and forms do not make the whole page unusable.
+5. Images have meaningful alternative text where informative; decorative images are handled appropriately.
+
+AUTHENTICATION AND AUTHORIZATION
+6. A valid registered user can sign in and is redirected to the correct role dashboard.
+7. Invalid credentials show a generic error and do not create an authenticated session.
+8. Logout ends the session; protected pages cannot be accessed as an authenticated user afterward.
+9. A logged-out user cannot access protected student/event/admin pages.
+10. A student-role user is denied administrator-only pages and API writes.
+11. An admin-role user can open the admin dashboard and audit log.
+
+DATABASE AND CRUD
+12. Database connection works using the configured settings.
+13. PR11 student create, view, update, search/filter, export (if exposed), and soft-delete/restore flows work as implemented.
+14. PR12 event create, view, update, and delete flows work as implemented.
+15. Event poster upload accepts permitted image types within configured limits and rejects invalid types/oversized files.
+16. PR13 GET requests for students and events return valid JSON.
+17. PR13 create/update/delete requests work without a full page reload.
+18. Duplicate or invalid data is rejected with a useful message and no unintended row is created.
+19. Missing/invalid CSRF token on a PR13 write is rejected.
+20. Database errors do not reveal SQL credentials, stack traces, or sensitive details in the browser.
+
+AUDIT AND SECURITY
+21. Relevant successful admin actions are recorded in the audit log.
+22. Audit log is visible only to administrators and is ordered newest first.
+23. User-supplied HTML/script-like content is safely rendered as text rather than executed.
+24. SQL inputs are handled through prepared statements where database values are user-controlled.
+25. Session and role checks are enforced on the server, not only by hiding menu links.
+26. Data and upload folders do not allow directory listing or execution of uploaded files.
+
+DOCUMENTATION AND REPOSITORY
+27. A new developer can follow README.md and PRACTICAL_15_README.txt to install locally.
+28. SQL import order and warning about PR8 schema reset are documented.
+29. Git repository status contains only intended source, assets, and documentation; no secrets or private data.
+30. GitHub remote points to the intended repository and the commit/push succeeds.
+31. Local deployment is verified in the browser using the correct project-folder URL.
+32. Any failed or untested checks and deployment limitations are documented honestly.
+
+ACCESSIBILITY QUICK CHECK
+33. Main flows can be navigated with keyboard alone.
+34. Focus indicator is visible.
+35. Forms have labels and validation feedback is understandable.
+36. Text/background contrast is sufficient and status updates are announced where relevant.

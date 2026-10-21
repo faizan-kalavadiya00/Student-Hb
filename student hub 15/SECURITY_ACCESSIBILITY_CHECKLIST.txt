@@ -1,0 +1,43 @@
+STUDENT HUB — SECURITY AND ACCESSIBILITY CHECKLIST
+===================================================
+
+Mark each item only after checking it in the running application.
+
+SECURITY
+[ ] Database credentials are local/environment-specific and are not committed to Git.
+[ ] Database operations that accept user input use prepared statements.
+[ ] Authentication verifies password hashes; plaintext passwords are not stored.
+[ ] Session IDs are regenerated after authentication.
+[ ] Protected routes enforce authorization server-side.
+[ ] Student-role users cannot perform administrator-only actions by directly requesting URLs.
+[ ] State-changing operations validate CSRF tokens.
+[ ] Inputs are validated on the server, including length, format, and allowed values.
+[ ] Dynamic HTML output is escaped for its output context.
+[ ] JSON API errors use appropriate HTTP status codes and do not leak stack traces.
+[ ] Upload validation checks allowed image types, size, and safe filenames.
+[ ] Uploaded files cannot be executed as PHP and directory listing is disabled.
+[ ] Session cookies use HttpOnly and SameSite; Secure is enabled when HTTPS is used.
+[ ] Error details go to server logs; production error display is disabled.
+[ ] Repository and SQL samples contain no private student data or secrets.
+[ ] Public hosting uses HTTPS, least-privilege DB credentials, backups, and suitable permissions.
+
+ACCESSIBILITY
+[ ] Pages declare language and include a viewport meta tag.
+[ ] Images conveying information have meaningful alt text.
+[ ] Form controls have programmatic labels.
+[ ] All navigation and controls work with a keyboard.
+[ ] Keyboard focus is clearly visible.
+[ ] Heading hierarchy describes page structure.
+[ ] Link and button labels describe their action.
+[ ] Validation errors are clearly associated with fields and explained in text.
+[ ] AJAX loading/success/error messages are announced using suitable live regions.
+[ ] Text is readable at zoom and narrow viewport sizes.
+[ ] Color is not the only way information is communicated.
+[ ] Tables have meaningful headers and can be viewed on small screens.
+
+REVIEW NOTES
+Date reviewed: ______________________
+Reviewer: ___________________________
+Items requiring remediation:
+______________________________________________________________
+______________________________________________________________

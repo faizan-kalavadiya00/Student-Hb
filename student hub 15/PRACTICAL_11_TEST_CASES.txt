@@ -1,0 +1,83 @@
+PRACTICAL 11 — TEST CASES
+Run after importing studenthub_pr11.sql and opening pr11.php through XAMPP/Apache.
+
+1. Seed data
+   Expected: at least 20 student records are displayed initially.
+
+2. Create
+   Add a new record with a unique enrollment number/email and valid values.
+   Expected: success message and new row appears.
+
+3. Required-field validation
+   Submit the form with one or more required fields blank.
+   Expected: browser validation prevents submission; server also validates submitted values.
+
+4. Invalid email / year
+   Enter an invalid email or year outside 1–6.
+   Expected: record is not inserted/updated and a validation message appears.
+
+5. Duplicate enrollment/email
+   Try adding an existing enrollment number or email.
+   Expected: no duplicate record; clear duplicate-value message.
+
+6. Read and pagination
+   Confirm rows are shown in the table. If more than 10 matching rows exist, click Next/Previous.
+   Expected: page changes and retains current search/filter.
+
+7. Search by name
+   Search for “Faizan”.
+   Expected: matching student is shown.
+
+8. Search by email
+   Search for “example.com” or a unique email.
+   Expected: matching email rows are shown.
+
+9. Search by course
+   Search for “Computer Science”.
+   Expected: only matching course records are shown.
+
+10. Update
+    Edit an active record and change the name/course, then save.
+    Expected: updated values appear; unique constraints remain enforced.
+
+11. Soft delete
+    Click Delete and confirm.
+    Expected: status becomes deleted; record disappears from Active records, but is not removed
+    permanently from the database.
+
+12. Filter deleted / restore
+    Select Deleted records, then click Restore.
+    Expected: row is restored to active records.
+
+13. Filter all
+    Select All records.
+    Expected: both active and deleted records can be seen.
+
+14. CSV export
+    Apply a search/filter and click Export CSV.
+    Expected: a CSV download contains the currently matching records and column headings.
+
+15. SQL injection-like search
+    Search for text such as ' OR 1=1 --.
+    Expected: treated as literal search text; no query bypass or database error.
+
+16. Output escaping
+    Try entering HTML-like text as a name (where allowed), then view the table.
+    Expected: text is displayed as text and does not execute as HTML/script.
+
+17. CSRF protection
+    Remove/change the hidden csrf value before submitting an add/edit/delete form.
+    Expected: request rejected with HTTP 403 security-check message.
+
+18. Database query safety
+    Inspect pr11.php: SELECT/INSERT/UPDATE statements use PDO prepare/execute; user values are
+    not concatenated into SQL. LIMIT/OFFSET are bound as integers.
+
+VIVA PREPARATION
+- CRUD means Create, Read, Update, and Delete.
+- Prepared statements separate SQL structure from user-supplied values and help prevent SQL injection.
+- Search uses parameterized LIKE conditions for name, email, course, and enrollment number.
+- Soft delete changes a status field instead of physically deleting the row.
+- Pagination uses LIMIT and OFFSET to retrieve a subset of matching records.
+- CSV export uses fputcsv() and exports only rows matching current filters.
+- CSRF tokens help ensure write requests originate from the rendered form.

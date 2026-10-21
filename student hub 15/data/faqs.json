@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "question": "What is Student Hub?",
+    "answer": "Student Hub is a student-focused website that brings academic information and campus resources together.",
+    "category": "General"
+  },
+  {
+    "id": 2,
+    "question": "Is Student Hub free to use?",
+    "answer": "Yes. The demonstration website is free to browse.",
+    "category": "General"
+  },
+  {
+    "id": 3,
+    "question": "Where can I find student events?",
+    "answer": "Open the Events page to browse, search, filter and sort event listings.",
+    "category": "Events"
+  },
+  {
+    "id": 4,
+    "question": "How do I search for an event?",
+    "answer": "Enter a keyword in the search box. Results update when you apply the search.",
+    "category": "Events"
+  },
+  {
+    "id": 5,
+    "question": "Can I sort events by date?",
+    "answer": "Yes. Use the sorting control on the Events page to order the list by date or title.",
+    "category": "Events"
+  },
+  {
+    "id": 6,
+    "question": "Where can I find student profiles?",
+    "answer": "Open Student Profiles from the navigation menu to browse sample student records.",
+    "category": "Profiles"
+  },
+  {
+    "id": 7,
+    "question": "Are the student records real?",
+    "answer": "No. The records in this practical are sample data created for demonstration.",
+    "category": "Profiles"
+  },
+  {
+    "id": 8,
+    "question": "How can I access the timetable?",
+    "answer": "Open Dashboard to view the sample weekly timetable.",
+    "category": "Academics"
+  },
+  {
+    "id": 9,
+    "question": "Where are administrative services?",
+    "answer": "The Dashboard includes links to fees, hall ticket, medical leave and scholarship pages.",
+    "category": "Services"
+  },
+  {
+    "id": 10,
+    "question": "Can I access the website on a phone?",
+    "answer": "Yes. The pages are styled to adapt to different screen sizes.",
+    "category": "Technical"
+  },
+  {
+    "id": 11,
+    "question": "Why is data not loading when I double-click an HTML file?",
+    "answer": "Fetch API requests for local JSON usually require a local web server. Start the project with VS Code Live Server or another local server.",
+    "category": "Technical"
+  },
+  {
+    "id": 12,
+    "question": "What happens if the JSON file cannot be loaded?",
+    "answer": "The page displays an error message and a retry button so you can try again.",
+    "category": "Technical"
+  },
+  {
+    "id": 13,
+    "question": "Does search check all fields?",
+    "answer": "Search checks the relevant text fields for the page, including titles and descriptions where applicable.",
+    "category": "Technical"
+  },
+  {
+    "id": 14,
+    "question": "How does pagination work?",
+    "answer": "The page divides the matching records into smaller pages. Use Previous and Next to move through results.",
+    "category": "Technical"
+  },
+  {
+    "id": 15,
+    "question": "Is registration submitted to a server?",
+    "answer": "No. The current registration page validates input in the browser only and does not save or send data.",
+    "category": "Registration"
+  }
+]

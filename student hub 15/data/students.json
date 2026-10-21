@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Patel",
+    "studentId": "25DCS001",
+    "department": "Computer Science",
+    "year": "2",
+    "interests": "Web Development, UI Design"
+  },
+  {
+    "id": 2,
+    "name": "Diya Shah",
+    "studentId": "25DCS002",
+    "department": "Computer Science",
+    "year": "2",
+    "interests": "Artificial Intelligence, Python"
+  },
+  {
+    "id": 3,
+    "name": "Rohan Mehta",
+    "studentId": "25DCS003",
+    "department": "Information Technology",
+    "year": "2",
+    "interests": "Cybersecurity, Networking"
+  },
+  {
+    "id": 4,
+    "name": "Anaya Desai",
+    "studentId": "25DCS004",
+    "department": "Computer Science",
+    "year": "2",
+    "interests": "Data Science, SQL"
+  },
+  {
+    "id": 5,
+    "name": "Vivaan Joshi",
+    "studentId": "25DCS005",
+    "department": "Information Technology",
+    "year": "2",
+    "interests": "Cloud Computing, DevOps"
+  },
+  {
+    "id": 6,
+    "name": "Kiara Trivedi",
+    "studentId": "25DCS006",
+    "department": "Computer Science",
+    "year": "2",
+    "interests": "Frontend Development, CSS"
+  },
+  {
+    "id": 7,
+    "name": "Arjun Parmar",
+    "studentId": "25DCS007",
+    "department": "Computer Science",
+    "year": "2",
+    "interests": "C++, Algorithms"
+  },
+  {
+    "id": 8,
+    "name": "Sara Khan",
+    "studentId": "25DCS008",
+    "department": "Information Technology",
+    "year": "2",
+    "interests": "Mobile Apps, Firebase"
+  },
+  {
+    "id": 9,
+    "name": "Reyansh Dave",
+    "studentId": "25DCS009",
+    "department": "Computer Science",
+    "year": "2",
+    "interests": "Machine Learning, Python"
+  },
+  {
+    "id": 10,
+    "name": "Myra Bhatt",
+    "studentId": "25DCS010",
+    "department": "Information Technology",
+    "year": "2",
+    "interests": "UI/UX, Prototyping"
+  },
+  {
+    "id": 11,
+    "name": "Aditya Vyas",
+    "studentId": "25DCS011",
+    "department": "Computer Science",
+    "year": "2",
+    "interests": "Full Stack Development"
+  },
+  {
+    "id": 12,
+    "name": "Ishita Modi",
+    "studentId": "25DCS012",
+    "department": "Computer Science",
+    "year": "2",
+    "interests": "Databases, SQL"
+  },
+  {
+    "id": 13,
+    "name": "Krish Soni",
+    "studentId": "25DCS013",
+    "department": "Information Technology",
+    "year": "2",
+    "interests": "IoT, Embedded Systems"
+  },
+  {
+    "id": 14,
+    "name": "Aisha Sheikh",
+    "studentId": "25DCS014",
+    "department": "Computer Science",
+    "year": "2",
+    "interests": "Computer Networks, Security"
+  },
+  {
+    "id": 15,
+    "name": "Dhruv Rathod",
+    "studentId": "25DCS015",
+    "department": "Information Technology",
+    "year": "2",
+    "interests": "Java, Software Testing"
+  }
+]
